@@ -1,20 +1,20 @@
 # ❤️  Heart Rate Calc (Consistent BPM Averaging)
 
-This Arduino-based project uses the **MAX30102** pulse oximeter sensor to measure heart rate (in BPM). It collects a fixed number of valid BPM readings and prints the average once complete.
+This Arduino-based project uses the **MAX30102** pulse oximeter sensor to measure heart rate (in BPM). It collects a fixed number of valid BPM readings and prints the average once complete. It also draws a **real-time heart rate graph** using the Arduino Serial Plotter.
 
 ---
 
 ## 🛠 Hardware Requirements
 
-- **MAX30102** sensor module
-- **Arduino Uno**, Nano, or compatible microcontroller
-- Jumper wires
+* **MAX30102** sensor module
+* **Arduino Uno**, Nano, or compatible microcontroller
+* Jumper wires
 
 ### ✅ Wiring (Arduino Uno Example)
 
 | MAX30102 Pin | Arduino Uno Pin |
-|--------------|-----------------|
-| VIN          | 3.3V or 5V       |
+| ------------ | --------------- |
+| VIN          | 3.3V or 5V      |
 | GND          | GND             |
 | SDA          | A4              |
 | SCL          | A5              |
@@ -27,15 +27,17 @@ This Arduino-based project uses the **MAX30102** pulse oximeter sensor to measur
 
 Install these via the Arduino Library Manager:
 
-- [SparkFun MAX3010x Sensor Library](https://github.com/sparkfun/SparkFun_MAX3010x_Sensor_Library)
-- `Wire` (built-in with Arduino)
-- `heartRate.h` (included in the SparkFun library)
+* [SparkFun MAX3010x Sensor Library](https://github.com/sparkfun/SparkFun_MAX3010x_Sensor_Library)
+* `Wire` (built-in with Arduino)
+* `heartRate.h` (included in the SparkFun library)
 
 ---
 
 ## 🚀 Code Behavior
 
 This project reads IR signals from your finger and calculates **heart beats per minute (BPM)** using the MAX30102. It collects **20 valid readings** (between 40–180 BPM) and then prints the **final average BPM**.
+
+It also sends the BPM values continuously to the Serial Monitor, which can be visualized as a **real-time BPM graph** using the Arduino Serial Plotter.
 
 ### ▶️ How it Works:
 
@@ -47,6 +49,8 @@ This project reads IR signals from your finger and calculates **heart beats per 
 ---
 
 ## 💻 Example Serial Output
+
+```
 Initializing...
 Place your finger on the sensor...
 72.1
@@ -59,6 +63,7 @@ Place your finger on the sensor...
 Final Average BPM (from 20 readings):
 
 73
+```
 
 ---
 
@@ -70,16 +75,16 @@ The MAX30102 communicates using **I²C**, which is an **open-drain** protocol. T
 
 ### Do you need to add them manually?
 
-- ✅ **Most MAX30102 breakout boards include 4.7kΩ pull-ups** on the SDA and SCL lines.
-- ❌ If you’re using a raw sensor or a custom PCB, **you must add them manually** (typically 4.7kΩ–10kΩ between SDA/SCL and VCC).
+* ✅ **Most MAX30102 breakout boards include 4.7kΩ pull-ups** on the SDA and SCL lines.
+* ❌ If you’re using a raw sensor or a custom PCB, **you must add them manually** (typically 4.7kΩ–10kΩ between SDA/SCL and VCC).
 
 ---
 
 ## 🧠 Tips for Reliable Readings
 
-- Ensure consistent pressure of the finger—too light or too hard will cause noise.
-- Avoid motion during measurement.
-- Use the Serial Plotter in Arduino IDE to observe the IR signal and fine-tune detection.
+* Ensure consistent pressure of the finger—too light or too hard will cause noise.
+* Avoid motion during measurement.
+* Use the Serial Plotter in Arduino IDE to observe the IR signal and fine-tune detection.
 
 ---
 
@@ -88,9 +93,12 @@ The MAX30102 communicates using **I²C**, which is an **open-drain** protocol. T
 This project is open-source under the MIT License.
 
 ---
-## 👤 Author  
-📌 **Ahmed Attay**  
-🔗 [LinkedIn Profile](https://www.linkedin.com/in/ahmed-attay-173888252/)  
+
+## 👤 Author
+
+📌 **Ahmed Attay**
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/ahmed-attay-173888252/)
+
 ## 🙌 Credits
 
-- [SparkFun MAX3010x Library](https://github.com/sparkfun/SparkFun_MAX3010x_Sensor_Library)
+* [SparkFun MAX3010x Library](https://github.com/sparkfun/SparkFun_MAX3010x_Sensor_Library)
