@@ -1,4 +1,4 @@
-# ❤️ MAX30102 Heart Rate Calc (Consistent BPM Averaging)
+# ❤️  Heart Rate Calc (Consistent BPM Averaging)
 
 This Arduino-based project uses the **MAX30102** pulse oximeter sensor to measure heart rate (in BPM). It collects a fixed number of valid BPM readings and prints the average once complete.
 
