@@ -97,7 +97,7 @@ This project is open-source under the MIT License.
 ## 👤 Author
 
 📌 **Ahmed Attay**
-🔗 [LinkedIn Profile](https://www.linkedin.com/in/ahmed-attay-173888252/)
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/ahmedattay/)
 
 ## 🙌 Credits
 
